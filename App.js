@@ -12,12 +12,8 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Card'>
-      <Stack.Screen name="App2" component={App2} />
-      <Stack.Screen name="Card" component={CardComp} />
-      <Stack.Screen name="VerticalBarChartScreen" component={VerticalBarChartScreen} />
-      <Stack.Screen name="HorizontalBarChartScreen" component={HorizontalBarChartScreen} />
-      
+      <Stack.Navigator>
+        <Stack.Screen name="Button" component={ButtonComp} />
       </Stack.Navigator>
     </NavigationContainer>
   );
