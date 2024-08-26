@@ -5,7 +5,7 @@ import { Svg, Rect } from 'react-native-svg';
 const VerticalBarChartScreen = ({navigation}) => {
   const data = [1200, 1700, 1500, 2000, 1800, 1600, 1700, 1900, 1750];
   const max = Math.max(...data);
-  const barWidth = 1;
+  const barWidth = 20;
   const barMargin = 5;
 
   const totalSales = data.reduce((acc, value) => acc + value, 0);
