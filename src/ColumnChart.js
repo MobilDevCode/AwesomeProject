@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import Svg, { Rect } from 'react-native-svg';
 
 const chartWidth = 300; 
@@ -12,9 +12,15 @@ const percentageIncrease = 12.96 / 100;
 const totalWithIncrease = totalValue + totalValue * percentageIncrease; 
 const maxData = 100;
 
-export default function App() {
+export default function App({navigation}) {
   return (
+    <View style={{flex:1}}>
+      <TouchableOpacity style={{ borderWidth:1,marginBottom:50 }} onPress={()=>(navigation.navigate("VerticalBarChartScreen"))}>
+        <Text> GO </Text>
+      </TouchableOpacity>
+   
     <View style={styles.container}>
+      
       <Text style={styles.title}>Column Chart</Text>
       <View style={styles.chartContainer}>
         {data.map((value, index) => {
@@ -51,6 +57,7 @@ export default function App() {
         <Text style={styles.totalText}>${totalWithIncrease.toFixed(2)}</Text> 
         <Text style={styles.percentage}>+12.96 %</Text>
       </View>
+    </View>
     </View>
   );
 }
