@@ -101,7 +101,6 @@ const CubeComp = ({navigation}) => {
         </TouchableWithoutFeedback>
       ))}
       <View style={{backgroundColor:"white",marginBottom:600}}>
-      <Button style={{}} title='Go App2' onPress={()=>(navigation.navigate("App2"))}> </Button>
       </View>
     </View>
   );

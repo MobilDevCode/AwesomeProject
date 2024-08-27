@@ -13,9 +13,7 @@ const VerticalBarChartScreen = ({navigation}) => {
 
   return (
     <View style={{flex:1}}>
-        <TouchableOpacity style={{borderWidth:1, }} onPress={()=>(navigation.navigate("HorizontalBarChartScreen"))}>
-            <Text>GO</Text>
-        </TouchableOpacity>
+        
    
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 }}>
       <Text style={{ fontSize: 18, marginBottom: 10 }}>Column Chart</Text>

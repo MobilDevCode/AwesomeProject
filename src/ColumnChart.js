@@ -15,9 +15,7 @@ const maxData = 100;
 export default function App({navigation}) {
   return (
     <View style={{flex:1}}>
-      <TouchableOpacity style={{ borderWidth:1,marginBottom:50 }} onPress={()=>(navigation.navigate("VerticalBarChartScreen"))}>
-        <Text> GO </Text>
-      </TouchableOpacity>
+     
    
     <View style={styles.container}>
       

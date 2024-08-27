@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text,TouchableOpacity } from 'react-native';
 import { Svg, Rect, Line, Circle } from 'react-native-svg';
 
-const HorizontalBarChartScreen = () => {
+const HorizontalBarChartScreen = ({navigation}) => {
   const data = [2400, 2100, 2200, 2500, 2400, 2600, 2550, 2700, 2600];
   const max = Math.max(...data);
   const barHeight = 15;
@@ -12,6 +12,9 @@ const HorizontalBarChartScreen = () => {
   const increasePercentage = 16.24;
 
   return (
+    <View style={{flex:1}}>
+      
+
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: '#f8f9fa' }}>
       <Text style={{ fontSize: 18, marginBottom: 10 }}>Column Chart</Text>
       <Svg height={data.length * (barHeight + barMargin)} width="100%">
@@ -64,6 +67,7 @@ const HorizontalBarChartScreen = () => {
           </Text>
         </View>
       </View>
+    </View>
     </View>
   );
 };

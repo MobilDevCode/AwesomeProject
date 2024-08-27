@@ -7,18 +7,24 @@ import VerticalBarChartScreen from './src/VerticalBarChartScreen';
 import CardComp from './src/CardComp';
 import App2 from './src/ColumnChart';
 import HorizontalBarChartScreen from './src/HorizontalBarChartScreen';
+import PricingCard from './src/PricingCard';
+import HomeScreen from './src/HomeScreen';
+
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Card'>
+   
+      <Stack.Navigator initialRouteName='HomeScreen'>
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="App2" component={App2} />
       <Stack.Screen name="Card" component={CardComp} />
       <Stack.Screen name="VerticalBarChartScreen" component={VerticalBarChartScreen} />
-      <Stack.Screen name="HorizontalBarChartScreen" component={HorizontalBarChartScreen} />
-      
+      <Stack.Screen name="HorizontalBarChartScreen" component={HorizontalBarChartScreen} />      
+      <Stack.Screen name="PricingCard" component={ PricingCard} />
       </Stack.Navigator>
+     
     </NavigationContainer>
   );
 }
