@@ -1,23 +1,27 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { Icon } from 'react-native-vector-icons/Icon';
-import FontAwesome from "react-native-vector-icons/FontAwesome"
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 export default function PricingCard2() {
   return (
     <View style={styles.container}>
+      <View style={styles.dotContainer}>
+        <View style={styles.dot} />
+        <View style={styles.dot} />
+        <View style={styles.dot} />
+      </View>
       <Text style={styles.priceText}>$59<Text style={styles.perMonth}>/ month</Text></Text>
       <View style={styles.contentContainer}>
         <View style={styles.contentRow}>
           <View style={styles.contentBox}>
-          <View style={styles.icon}>
-            <FontAwesome name="check" size={18} color="#00C48C" />
+            <View style={styles.icon}>
+              <FontAwesome name="check" size={18} color="#00C48C" />
             </View>
             <Text style={styles.contentText}>Up to 3 Projects</Text>
           </View>
           <View style={styles.contentBox}>
-          <View style={styles.icon}>
-            <FontAwesome name="check" size={18} color="#00C48C" />
+            <View style={styles.icon}>
+              <FontAwesome name="check" size={18} color="#00C48C" />
             </View>
             <Text style={styles.contentText}>Unlimited Options</Text>
           </View>
@@ -25,23 +29,20 @@ export default function PricingCard2() {
         <View style={styles.contentRow}>
           <View style={styles.contentBox}>
             <View style={styles.icon}>
-            <FontAwesome name="check" size={18} color="#00C48C" />
+              <FontAwesome name="check" size={18} color="#00C48C" />
             </View>
-          
-            <Text style={styles.contentText}>Unlimited Trafic</Text>
+            <Text style={styles.contentText}>Unlimited Traffic</Text>
           </View>
           <View style={styles.contentBox}>
-          <View style={styles.icon}>
-            <FontAwesome name="check" size={18} color="#00C48C" />
+            <View style={styles.icon}>
+              <FontAwesome name="check" size={18} color="#00C48C" />
             </View>
             <Text style={styles.contentText}>Unlimited Users</Text>
           </View>
-
-         
         </View>
         <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Choose Plan</Text>
-      </TouchableOpacity>
+          <Text style={styles.buttonText}>Choose Plan</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -58,6 +59,20 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 20,
     backgroundColor: '#fff',
+    position: 'relative',
+  },
+  dotContainer: {
+    flexDirection: 'row',
+    position: 'absolute',
+    top: 10,
+    right: 10,
+  },
+  dot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: '#ccc',
+    marginHorizontal: 2,
   },
   priceText: {
     fontSize: 50,
@@ -76,7 +91,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     marginVertical: 10,
-    flex:1
+    flex: 1,
   },
   contentBox: {
     flex: 1,
@@ -117,3 +132,4 @@ const styles = StyleSheet.create({
     borderRadius:10,
   },
 });
+
