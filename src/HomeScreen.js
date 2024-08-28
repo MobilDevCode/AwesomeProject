@@ -10,6 +10,7 @@ export default function HomeScreen({navigation}) {
       <Button title='Pricing Card' onPress={()=>(navigation.navigate("PricingCard"))}></Button>
       <Button title='App2' onPress={()=>(navigation.navigate("App2"))}></Button>
       <Button title='Pricing Card2' onPress={()=>(navigation.navigate("PricingCard2"))}></Button>
+      <Button title='Pricing Card3' onPress={()=>(navigation.navigate("PricingCard3"))}></Button>
 
     </View>
   )
