@@ -51,7 +51,9 @@ const PricingCard = () => {
       <View style={styles.featuresContainer}>
         {['up to 3 projects', 'unlimited traffic', 'unlimited user access', 'free viewers', '30 days guarantee'].map((feature, index) => (
           <View key={index} style={styles.featureItem}>
-            <FontAwesome name="check-circle" size={18} color="#00C48C" />
+           <View style={styles.icon}>
+            <FontAwesome name="check" size={18} color="#00C48C" />
+            </View>
             <Text style={styles.featureText}>{feature}</Text>
           </View>
         ))}
@@ -159,6 +161,14 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
+  },
+  icon:{
+    backgroundColor:"#b9f2e0",
+    width:30,
+    height:30,
+    justifyContent:"center",
+    alignItems:"center",
+    borderRadius:10,
   },
 });
 
