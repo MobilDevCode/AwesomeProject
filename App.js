@@ -11,7 +11,8 @@ import PricingCard from './src/PricingCard';
 import HomeScreen from './src/HomeScreen';
 import PricingCard2 from './src/PricingCard2';
 import PricingCard3 from './src/PricingCard3';
-import PricingCard4 from './src/PricingCard4'
+import PricingCard4 from './src/PricingCard4';
+import PromoCard from './src/PromoCard';
 ;const Stack = createNativeStackNavigator();
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Stack.Screen name="HorizontalBarChartScreen" component={HorizontalBarChartScreen} />      
       <Stack.Screen name="PricingCard3" component={PricingCard3} />
       <Stack.Screen name="PricingCard4" component={PricingCard4} />
+      <Stack.Screen name="PromoCard" component={PromoCard} />
 
       </Stack.Navigator>
      
